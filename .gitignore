@@ -1,0 +1,18 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Mac system files
+.DS_Store
+
+# Temporary outputs
+outputs/*
+
+# Secrets
+.env
+
+# IDE settings
+.vscode/
