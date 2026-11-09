@@ -23,3 +23,5 @@ outputs/*
 *.JPG
 *.JPEG
 *.PNG
+
+models/deepfake/*.bin
