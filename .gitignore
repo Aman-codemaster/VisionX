@@ -16,5 +16,10 @@ outputs/*
 
 # IDE settings
 .vscode/
-.test_image.jpeg
-.test_real.jpeg
+# Test images
+*.jpg
+*.jpeg
+*.png
+*.JPG
+*.JPEG
+*.PNG
