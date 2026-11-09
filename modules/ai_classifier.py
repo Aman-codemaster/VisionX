@@ -1,19 +1,15 @@
-def classify_image(image, model):
+def classify_image(image, detector):
 
-    # Get predictions from the model
-    results = model(image, top_k=None)
+    # Run Smaug on the uploaded image
+    score = detector(image.convert("RGB"))
 
-    # Sort predictions by confidence
-    results = sorted(
-        results,
-        key=lambda x: x["score"],
-        reverse=True
-    )
+    # Convert score into a percentage
+    ai_probability = float(score) * 100
 
-    # Get the highest prediction
-    best_result = results[0]
+    # Classify the image
+    if score >= 0.5:
+        prediction = "AI-Generated"
+    else:
+        prediction = "Likely Real"
 
-    label = best_result["label"]
-    confidence = best_result["score"]
-
-    return label, confidence, results
+    return prediction, ai_probability
